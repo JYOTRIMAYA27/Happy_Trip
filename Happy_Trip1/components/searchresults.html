@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../style/happytrip-styles.css" />
+  <script type="module" src="../Models/master.js"></script>
+  <script type="module" src="../components/searchresults.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.travelbizmonitor.com/wp-content/uploads/2022/09/Cleartrip-New-Logo.png" alt="" height="24"
+          class="d-inline-block align-text-top" />
+      </a>
+      <div class="icons">
+        <i style="margin-left:0px" class="bi bi-airplane"></i>
+        <i style="margin-left:0px" class='fas fa-bed'></i>
+        <i style="margin-left:0px" class="bi bi-train-front"></i>
+      </div>
+      <div class="subsection-nav">
+        <a class="navbar-brand nav-element" href="#">
+          INR<i class="bi bi-currency-rupee"></i>
+        </a>
+        <a class="navbar-brand nav-element" href="#">
+          <i class="bi bi-headset"></i>&nbsp; Support
+        </a>
+        <!-- Login in form begining -->
+        <div class="w3-container">
+          <button onclick="document.getElementById('id01').style.display='block'"
+            class="btn btn-primary">Login/Signup</button>
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+              <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <div style="display:flex; ">
+                <div style="background-color: rgb(253, 96, 39); margin-right: 60px;color: white; font-size: 16px;">
+                  <div style="margin-left:50px; margin-top: 30px;">
+                    <h2>Sign up / log in to get <br> the best of Cleartrip</h2><br>
+                    <div style="display:flex; justify-content: space-between; width: 85%;">
+                      <div> <i class="bi bi-wallet" style="margin-right: 15px; "></i></div>
+                      <div> Earn 200 in your Cleartrip wallet on new user sign up</div>
+                    </div><br>
+                    <div style="display:flex; justify-content: space-between; width: 85%;">
+                      <div><i class="bi bi-percent" style="margin-right: 15px; "> </i></div>
+                      <div>Get 12 off upto 1200 on first flight booking using CTFIRST coupon code</div>
+                    </div><br>
+                    <div style="display:flex; justify-content: space-between; width: 85%;">
+                      <div><i class="bi bi-cash-coin" style="margin-right: 15px; "> </i></div>
+                      <div>Earn & redeem Flipkart supercions on flight bookings</div>
+                    </div><br>
+                  </div>
+                </div>
+                <div style=" margin-left: -30px; padding: 10px 80px 50px 50px;">
+                  <h3 style="margin-left:110px; margin-top:30px;">Login</h3> <br>
+                  <form action="">
+                    <div class="form-group">
+                      <label for="uname"><b>Username</b></label>
+                      <input class="form-control" ; type="text" placeholder="Enter Username" name="uname" required><br>
+                    </div>
+                    <div class="form-group">
+                      <label for="psw"><b>Password</b></label>
+                      <input class="form-control" ; type="password" placeholder="Enter Password" name="psw"
+                        required><br>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>
+                    <input class="form-check-input" type="checkbox" value="" id="tca">
+                    <label class="form-check-label" for="defaultCheck1">Remember Me
+                      <span class="psw" style="margin-left: 50px;"><a href="#">Forgot
+                          password?</a></span></label><br><br><br>
+                    <span class="psw" style="margin-left: 25px;"><a href="#">Don't have an account? Sign up
+                        here</a></span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- login form end -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="display:flex; justify-content: space-between;">
+    <!-- direction,fromCity,toCity,fromDate,toDate,adults,children,infants -->
+    <input class="btn btn-dark" type="text" value="Round" id="direction" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="fromCity" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="toCity" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="fromDate" disabled>
+    <!-- <input type="text" value="Round" id="toDate" disabled> -->
+    <input class="btn btn-dark" type="text" value="Round" id="adults" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="children" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="infants" disabled>
+  </div>
+  <br>
+  <hr />
+  <div class="container">
+    <div class="row align-items-start">
+
+
+      <div class="col-sm-12" style="width: 100%; ">
+        <div class="col-sm-12" style="display: flex; justify-content: space-between;">
+
+          <div class="col-sm-2 alert alert-danger">Airlines</div>
+
+          <div class="col-sm-2 alert alert-danger">Departure</div>
+
+          <div class="col-sm-2 alert alert-danger">Duration</div>
+
+          <div class="col-sm-2 alert alert-danger">Arrival</div>
+
+          <div class="col-sm-2 alert alert-danger">Price</div>
+
+          <div class="col-sm-2 alert alert-danger">Smart Sort</div>
+        </div>
+
+        <br><br>
+        <div class="card" style="font-size: 12px;">
+          <div class="card-body">
+            <div class="col-sm-12">
+
+              <div class="col-sm-2">
+                <div>
+                  <img src="https://www.goindigo.in/content/dam/indigov2/6e-website/thmbnail.jpg"
+                    style="width:70px; height: 70px; border-radius: 50%;">
+                </div>
+                <div id="flightName"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="fCity" style="font-size: 10px;"></div>
+                <div class="elements" id="flightNu"></div>
+
+                <div class=" elements" id="departTime"></div>
+              </div>
+
+
+              <div class="col-sm-2 elements" id="duration" style="text-align: center; margin-left: 1.5% "> </div>
+              <div class="col-sm-2 elements" style="text-align: center; margin-left:  0px">
+                <div class="elements" id="tCity" style="font-size: 10px;"></div>
+                <div class="elements" id="reachTime" style="text-align: center; margin-left: 0.5% ">04:00</div>
+
+              </div>
+              <div class="col-sm-2 elements" id="price" style="text-align: center; margin-left: 0.5% ">₹ </div>
+
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
+
+              <div class="col-sm-1 elements"><button type="button" class="btn btn-danger elements" id="bookOne"
+                  style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card" style="font-size: 12px;">
+          <div class="card-body">
+            <div class="col-sm-12">
+
+              <div class="col-sm-2">
+                <div>
+                  <img src="https://seeklogo.com/images/V/vistara-logo-C07710BC2B-seeklogo.com.png"
+                    style="width:70px; height: 70px; border-radius: 50%;">
+                </div>
+                <div id="flightNameTwo"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="fCityTwo" style="font-size: 10px;"></div>
+                <div class="elements" id="flightNumberTwo"></div>
+
+                <div class=" elements" id="departTimeTwo"></div>
+              </div>
+
+              <div class="col-sm-2 elements" id="durationTwo" style="text-align: center; margin-left: 1.5% "> </div>
+              <div class="col-sm-2 elements" style="text-align: center; margin-left:  0px">
+                <div class="elements" id="tCityTwo" style="font-size: 10px;"></div>
+                <div class="elements" id="reachTimeTwo" style="text-align: center; margin-left: 0.5% ">04:10</div>
+
+              </div>
+
+              <div class="col-sm-2 elements" id="priceTwo" style="text-align: center; margin-left: 0.5% ">₹ </div>
+
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
+
+              <div class="col-sm-1 elements"><button type="button" class="btn btn-danger elements" id="bookTwo"
+                  style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card" style="font-size: 12px;">
+          <div class="card-body">
+            <div class="col-sm-12">
+
+              <div class="col-sm-2">
+                <div>
+                  <img
+                    src="https://www.logotaglines.com/wp-content/uploads/2021/05/kingfisher-beer-logo-tagline-slogan.jpg"
+                    style="width:70px; height: 70px; border-radius: 50%;">
+                </div>
+                <div id="flightNameThree"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="fCityThree" style="font-size: 10px;"></div>
+                <div class="elements" id="flightNumberThree"></div>
+
+                <div class=" elements" id="departTimeThree"></div>
+              </div>
+
+              <div class="col-sm-2 elements" id="durationThree" style="text-align: center; margin-left: 1.5% "> </div>
+              <div class="col-sm-2 elements" style="text-align: center; margin-left:  0px">
+                <div class="elements" id="tCityThree" style="font-size: 10px;"></div>
+                <div class="elements" id="reachTimeThree" style="text-align: center; margin-left: 0.5% ">09:00</div>
+
+              </div>
+
+              <div class="col-sm-2 elements" id="priceThree" style="text-align: center; margin-left: 0.5% ">₹ </div>
+
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
+
+              <div class="col-sm-1 elements"><button type="button" class="btn btn-danger elements" id="bookThree"
+                  style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

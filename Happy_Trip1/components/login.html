@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../style/happytrip-styles.css" />
+
+  <!-- Including the script for search activies to be performed-->
+  <script type="text/javascript" src="searchTS.js"></script>
+</head>
+
+<body>
+  <!-- Login in form begining -->
+
+  <!--Reuirement-->
+  <form>
+    <div class="w3-container mt-5
+    ">
+      <div class="w3-modal-content">
+        <div style="display: flex">
+          <div style="
+              background-color: rgb(136, 119, 113);
+              margin-right: 60px;
+              color: white;
+              font-size: 16px;
+            ">
+            <div style="margin-left: 50px; margin-top: 30px">
+              <h2>
+                Sign up / log in to get <br />
+                the best of HappyTrip
+              </h2>
+              <br />
+              <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  width: 85%;
+                ">
+                <div>
+                  <i class="bi bi-wallet" style="margin-right: 15px"></i>
+                </div>
+                <div>Earn 200 in your HappyTrip wallet on new user sign up</div>
+              </div>
+              <br />
+              <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  width: 85%;
+                ">
+                <div>
+                  <i class="bi bi-percent" style="margin-right: 15px"> </i>
+                </div>
+                <div>
+                  Get 12 off upto 1200 on first flight booking using HTFIRST
+                  coupon code
+                </div>
+              </div>
+              <br />
+              <div style="
+                  display: flex;
+                  justify-content: space-between;
+                  width: 85%;
+                ">
+                <div>
+                  <i class="bi bi-cash-coin" style="margin-right: 15px"> </i>
+                </div>
+                <div>Earn & redeem Flipkart supercions on flight bookings</div>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div style="margin-left: -30px; padding: 10px 80px 50px 50px">
+            <h3 style="margin-left: 110px; margin-top: 30px">Login</h3>
+            <br />
+            <form>
+              <div class="form-group">
+                <label for="uname"><b>Username</b></label>
+                <input class="form-control" ; type="text" placeholder="Enter Username" id="fname" name="uname"
+                  required /><br />
+                <span id="UserId" style="color:red"></span>
+              </div>
+
+
+              <div class="form-group">
+                <label for="psw"><b>Password</b></label>
+                <input class="form-control" ; type="password" placeholder="Enter Password" id="psw" name="psw"
+                  required /><br />
+                <span id="PassId" style="color: red;"></span>
+              </div>
+
+              <!--------------------------Requirement10-----------------------------------//
+              //In login page username and password should make it as mandatory fields otherwise, if user try to login
+              whithout the username and password then it should show the mesasge below the form fields(Dont use any
+              alert messages).
+              //"Please fill out the username"
+              //"Please fill out the passsword"-->
+
+              <button type="submit" onclick=" return validateForm()" value="submit"
+                class="btn btn-primary my-1 passanger-submit">
+                <a href="../components/search.html" style="text-decoration: none; color: white">Book Ticket</a></button>
+
+              <input class="form-check-input" type="checkbox" value="" id="tca" />
+              <label class="form-check-label" for="defaultCheck1">Remember Me
+                <span class="psw" style="margin-left: 50px"><a href="#">Forgot
+                    password?</a></span></label><br /><br /><br />
+              <span class="psw" style="margin-left: 25px"><a href="#">Don't have an account? Sign up here</a></span>
+            </form>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- login form end -->
+  </form>
+  <script src="login.js"></script>
+</body>
+
+</html>
